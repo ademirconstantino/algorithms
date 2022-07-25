@@ -40,7 +40,6 @@ public class QuickSort {
       if(end >= numbers.length) {
          boolean existsUnsorted = existsUnsorted(numbers);
          if(existsUnsorted) {
-            printArray(numbers);
             return quickSort(numbers, 0, 1);
          } else {
             return numbers;
@@ -51,7 +50,6 @@ public class QuickSort {
          int swap = numbers[end];
          numbers[end] = numbers[start];
          numbers[start] = swap;
-         printArray(numbers);
       }
       
         return quickSort(numbers, start + 1, end + 1);
